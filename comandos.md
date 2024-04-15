@@ -185,6 +185,23 @@ Nos muestra que tenemos un origin para hacer fetch (traernos cosas) y un origin 
 
 Y con esto ya estamos listos!
 
+## Vamos a enviar de nuestro repositorio local a nuestro repositorio remoto los cambios
+
+1. `git push origin main` => para enviar nuestros cambios del repositorio local al repositorio remoto, con esto guarda las credenciales y empieza a hacer el push. Para este ejemplo nos sale un error: "Las actualizaciones fueron rechazadas porque el repositorio remoto contiene trabajo que no tienes localmente", y esto es porque creamos directamente en GitHub el archivo README y ese archivo no está en el repositorio local, lo primero que hay que hacer es integrar los cambios en Github al repositorio local, para después poder hacer un push de todo desde el repositorio local hacia el repositorio remoto.
+2. `git pull origin main` => para traernos los cambios que hay en el repositorio remoto hacia el repositorio local, en este caso me confirma que estoy conectado a la nueva rama 'origin/main', pero me saca un error fatal en el cual me dice "Necesita especificar cómo reconciliar las ramas divergentes", a través de tres opciones:
+- git config pull.rebase false
+- git config pull.rebase true
+- git config pull.ff only
+- Se puede reemplazar "git config" con "git config --global" para aplicar
+ayuda: la preferencia en todos los repositorios
+
+3. `git config --global pull.rebase false` => para fusionar entonces las ramas divergentes, y ahora me saca este error: "me rehuso a fusionar historias no relacionadas", eso significa que que la historia de commits del repositorio local no tiene nada que ver con la historia de commits del repositorio remoto, pero nosotros podemos forzar a que esto ocurra
+4. `git pull origin main --allow-unrelated-histories` => para forzar a que si me permita hacer el merge con rama main del repositorio local, me saca a la pantalla intermedia y allá le doy `ESC+shift+zz`, y queda hecho el merge
+5. `ls -al` => para verificar que me haya traido los cambios del repositorio remoto hacia el respositorio local, en este caso vemos qye trajo el achivo "README.md"
+6. `git status`, para verificar que no haya nada que hacer commit en el repositorio local, si hay cambios pendientes enviarlos al repositorio local
+7. `git push origin main` => ahora si para enviar los cambios al repositorio remoto 
+
+
 
 
 

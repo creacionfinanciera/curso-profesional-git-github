@@ -250,8 +250,8 @@ ayuda: la preferencia en todos los repositorios
 10. `git branch header` => creamos nueva rama
 11. `git branch footer` => creamos nueva rama
 12. `git branch` => para revisar las ramas creadas
-13. `git branch origin header` => para enviar rama nueva a github
-14. `git branch origin footer` => para cenviar rama nueva a github
+13. `git push origin header` => para enviar rama nueva a github
+14. `git push origin footer` => para cenviar rama nueva a github
 
 
 

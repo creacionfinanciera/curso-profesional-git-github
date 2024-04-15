@@ -199,7 +199,22 @@ ayuda: la preferencia en todos los repositorios
 4. `git pull origin main --allow-unrelated-histories` => para forzar a que si me permita hacer el merge con rama main del repositorio local, me saca a la pantalla intermedia y allá le doy `ESC+shift+zz`, y queda hecho el merge
 5. `ls -al` => para verificar que me haya traido los cambios del repositorio remoto hacia el respositorio local, en este caso vemos qye trajo el achivo "README.md"
 6. `git status`, para verificar que no haya nada que hacer commit en el repositorio local, si hay cambios pendientes enviarlos al repositorio local
-7. `git push origin main` => ahora si para enviar los cambios al repositorio remoto 
+7. `git push origin main` => ahora si para enviar los cambios al repositorio remoto
+
+## Si hacemos cambios en nuestro repositorio remoto y queremos llevar los cambios en nuestro repositorio local
+1. Vamos al repositorio en Github, entramos al archivo blogpost.html
+2. `edit this file` => para activar la funcionalidad de edición en el archivo
+3. Hago los cambios en el código en el mismo github
+4. `Preview` => para visualizar previamente como quedan los cambios
+5. `Commit changes` => para hacer el commit desde github, coloco el mensaje, una descripción más amplia, selecciono el usuario que hizo el cambio, y que quiero hacer directamente el commit a la rama main
+6. Visualizo los cambios dentro de Github en el archivo
+7. `git pull origin main` => para llevar los cambios al repositorio local
+8. Si le damos clic a `commits`, podemos ver todos los cambios realizados hasta el momento
+
+## Si hacemos cambios en nuestro repositorio local y queremos llevar los cambios a nuestro repositorio remoto
+1. Hacemos los cambios en nuestros archivos, en nuestra computadora
+2. `git pull origin main` => Lo primero que hay que hacer antes de hacer un commit en nuestro repositorio local, es traernos del repositorio remoto la última versión
+
 
 
 

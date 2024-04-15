@@ -240,7 +240,7 @@ Yo le puedo dar un alias a todo este comando tan largo, si lo pienso utilizar re
 `git tag` => verifico que lo haya borrado en git, pero en github continua, y la razón por la que no se borran automaticamente en github es porque los tags se pueden usar como "Releases", que es la forma como tu tageas o categorizas que algo está listo, entonces lo que tenemos que hacer es borrarlo de una manera especial
 `git push origin :refs/tags/dormido` => para borrar efectivamente el tag en github
 
-## Manejo de ramas en Github
+
 
 
 

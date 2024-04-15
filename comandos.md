@@ -214,6 +214,36 @@ ayuda: la preferencia en todos los repositorios
 ## Si hacemos cambios en nuestro repositorio local y queremos llevar los cambios a nuestro repositorio remoto
 1. Hacemos los cambios en nuestros archivos, en nuestra computadora
 2. `git pull origin main` => Lo primero que hay que hacer antes de hacer un commit en nuestro repositorio local, es traernos del repositorio remoto la última versión
+3. `git commit -am "Una versión del hyperblog"` => hacemos commit de los cambios que nos trajimos y los que esten pendientes en el repositorio local
+4. Antes de enviar nuevamente el cambio, debería hacer 'git pull origin main' de nuevo, porque mientras hice el commit de pronto cambiaron cosas en el repositorio remoto, lo hacemos simplemente para no tener conflictos
+5. `git push origin main` => para enviar los cambios al repositorio remoto
+6. Verificamos en el repositorio remoto que haya quedado actualizado correctamente
+
+
+## Cómo generar tags en nuestro proyecto
+`git log --all` => nos muestra la historia de todos los commits que se han hecho
+`git log --all --graph` => nos muestra la misma historia con unas rayas que representan las ramas
+`git log --all --graph --decorate --oneline` => nos muestra la historia, de manera mucho más comprimida
+Yo le puedo dar un alias a todo este comando tan largo, si lo pienso utilizar recurrentemente:
+`alias arbolito="git log --all --graph --decorate --oneline"` y luego escribo simplemente el comando `arbolito`
+`git tag -a v0.1 -m "Resultado de las primeras clases del curso" 2ba3ce5` => para crear un tag que es como un separador o un identificador, de una parte de commits del proyecto, dónde se identifica como un bloque de avance en el proyecto
+`git tag` => muestra la lista de todos los tags
+`git show-ref --tags` => para saber a que commit esta conectado o asignado un tag "b09eeef8750898fd4f85db7b812ba9f8fcdc6525 refs/tags/v0.1"
+`history` => si miramos la historia vemos en la historia de acciones la referencia del momento en el que cree el tag
+`git status` => observo que aparentemente no hay nada que enviar como un commit, porque los tags no son cambios, pero si que hay algo que enviar, porque la idea es que los tags los pueda ver alguien, los tags son útiles en Github, en el sitio web, porque es la forma en la que usuarios de código abierto u otras personas pueden ver que versión ocurrio, son raramente útiles dentro del proyecto, a no ser que quieras dejar un registro que diga "aquí fue donde quedé!", simplemente es más como referencia interna, entonces vamos a enviarlo a Github.
+`git pull origin main` => para traernos los cambios que se hayan hecho en el repositorio remoto.
+`git push origin --tags` => para enviar los tags al servidor remoto, y verificamos en Github y brancehs o tags, y visualizaremos el nuevo tag
+
+`git tag -d dormido` => si me equivoque al generar un tag, así lo puedo borrar
+`git pull origin main` => como buena practica, me traigo los cambios de github
+`git push origin --tags` => y envío los tags a github
+`git tag` => verifico que lo haya borrado en git, pero en github continua, y la razón por la que no se borran automaticamente en github es porque los tags se pueden usar como "Releases", que es la forma como tu tageas o categorizas que algo está listo, entonces lo que tenemos que hacer es borrarlo de una manera especial
+`git push origin :refs/tags/dormido` => para borrar efectivamente el tag en github
+
+## Manejo de ramas en Github
+
+
+
 
 
 

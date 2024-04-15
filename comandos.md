@@ -253,6 +253,11 @@ ayuda: la preferencia en todos los repositorios
 13. `git push origin header` => para enviar rama nueva a github
 14. `git push origin footer` => para cenviar rama nueva a github
 
+## Configurar múltiples colaboradores en un repositorio de Github
+Imaginemos que hay otro programador completamente distinto, que se va a encargar de hacer el footer y yo me voy a encargar de hacer el header, que pasa cuando ese programador quiere fusionar su trabajo de "footer" con mi trabajo de "header", y cuando los dos estamos listos para enviarlo a main, esto es un flujo de trabaho en Git.
+
+`Aqui vamos ... pero por ahora vamos a pasar de nuevo al curso de udemy de React`
+
 
 
 

@@ -237,6 +237,23 @@ ayuda: la preferencia en todos los repositorios
 15. `git tag` => verifico que lo haya borrado en git, pero en github continua, y la razón por la que no se borran automaticamente en github es porque los tags se pueden usar como "Releases", que es la forma como tu tageas o categorizas que algo está listo, entonces lo que tenemos que hacer es borrarlo de una manera especial
 16. `git push origin :refs/tags/dormido` => para borrar efectivamente el tag en github
 
+## Manejo de ramas en Github
+1. `git show-branch` => nos muestra cuales son las ramas que existen y cual ha sido su historia
+2. `git show-branch --all` => nos muestra lo mismo pero con un poco más de información
+3. `git branch` => veo las ramas que tengo y en cual estoy
+4. `git pull origin main` => traemos la última versión del servidor remoto
+5. `git commit -am "Cambios en comandos.md: Manejo de ramas en github"` => hacemos commit de los últimos cambios
+6. `git checkout cabecera` => cambiamos de rama en el servidor local
+7. `git push origin cabecera` => le empujamos la rama cabecera a la rama origin que es nuestra rama en el servidor remoto
+8. Verificamos en Github que se haya creado nuestra nueva rama "cabecera", y podemos ver en ella tambien su historia
+9. `git checkout main` => volvemos a la rama principal, donde se hizo el cambio mas reciente
+10. `git branch header` => creamos nueva rama
+11. `git branch footer` => creamos nueva rama
+12. `git branch` => para revisar las ramas creadas
+13. `git branch origin header` => para enviar rama nueva a github
+14. `git branch origin footer` => para cenviar rama nueva a github
+
+
 
 
 

@@ -68,33 +68,49 @@
 
 ## Explicación visual del proceso de repositorios locales y remotos
 
-1. ![Crear repositorio local](./Image/Imagen%201.png)
+### 1. Crear repositoro local
+
+![Crear repositorio local](./Image/Imagen%201.png)
 Cuando tenemos una carpeta con archivos iniciales, y damos `git init` creamos dos espacios
 - Preparación o Staging
 - Repositorio Local
 La magia de Git es que al hacer esto, en todos los computadores de las personas que desarrollan, hay una copia exacta de toda la historia del proyecto, entonces nunca jamas se va a perder algo
 
-2. ![Pasar a preparación](./Image/Imagen%202.png)
+### 2. Pasar a preparación
+
+![Pasar a preparación](./Image/Imagen%202.png)
 Cuando queremos agregar una carpeta de nuestro directorio al repositorio local, lo primero que hacemos es ponerlo en un área de preparación o staging con `git add`, esto le permite a git hacer un tracking, o un rastreo o seguimiento de los cambios que sufran los archivos en nuestra carpeta. Si un archivo "Tracked" no se le hace nada, eventualmente va a pasar el garbage collector y lo va a borrar.
 
-3. ![Pasar los cambios](./Image/Imagen%203.png)
+### 3. Pasar los cambios
+
+![Pasar los cambios](./Image/Imagen%203.png)
 Cuando queremos enviar la versión final y definitiva a nuestro repositorio, usamos `git commit` para enviar todo que esté en staging a nuestro repositorio local.
 
-4. ![Traer del repositorio remoto hacia repositorio local](./Image/Imagen%204.png)
+### 4. Traer del repositorio remoto hacia repositorio local
+
+![Traer del repositorio remoto hacia repositorio local](./Image/Imagen%204.png)
 Pero que pasa cuando tu tienes un equipo de trabajo con multiples desarrolladores?, necesitas un servidor o repositorio remoto (GITHUB), que es un lugar dónde tienes el mismo repositorio en el que tu estas trabajando, pero todo el mundo le manda datos para alla, es decir, trabajan en local y cuando terminan actualizan los cambios en el repositorio remoto para que el resto del equipo los pueda ver.
 
 Para traernos datos de un repositorio remoto ` git clone url`, y lo que hacemos es que con la dirección de nuestro repositorio remoto, nos traemos los archivos a dos lugares, nos traemos una copia de la rama master a nuestro directorio de trabajo y crea la base de datos de todos los cambios históricos en el repositorio local, y deja Staging quieto y listo.
 
-5. ![Actualizar hacia repositorio remoto](./Image/Imagen%205.png)
+### 5. Actualizar hacia repositorio remoto
+
+![Actualizar hacia repositorio remoto](./Image/Imagen%205.png)
 Entonces sigo trabajando en mi repositorio local con `git add` y `git commit` y cuando estoy listo para que la última versión de esos commit "el HEAD" de la rama "Master", se envíe al repositorio remoto dónde todo el mundo trabaja hago `git push`, y si hay conflictos aprendo a resolverlos. 
 
-6. ![Actualizar hacia el repositorio local en dos pasos](./Image/Imagen%206.png)
+### 6. Actualizar hacia el repositorio local en dos pasos
+
+![Actualizar hacia el repositorio local en dos pasos](./Image/Imagen%206.png)
 Que pasa cuando ya estoy conectado al repositorio remoto, ya lo cloné, pero quiero traer una actualización porque alguien más cambió algo, hacemos un `git fetch` y esto me lo trae al repositorio local, pero no me lo copia en mis archivos, para que me lo copie en mis archivos tengo que fusionar la última versión que está en el repositorio local con mi versión actual, y eslo lo hago con `git merge`.
 
-7. ![Actualizar hacia el repositorio local en un solo paso](./Image/Imagen%207.png)
+### 7. Actualizar hacia el repositorio local en un solo paso
+
+![Actualizar hacia el repositorio local en un solo paso](./Image/Imagen%207.png)
 Pero para que tengo hacer fetch y merge al mismo tiempo, si en general lo que yo quiero es que me traiga al repositorio y al directorio, tal cual como lo hice cuando cloné el repositorio remoto por primera vez, el comando que fusiona los dos conceptos es `git pull`.
 
-8. ![Fusionar la rama principal como rama secundaria - HEAD](./Image/Imagen%208.png)
+### 8. Fusionar la rama principal como rama secundaria - HEAD
+
+![Fusionar la rama principal como rama secundaria - HEAD](./Image/Imagen%208.png)
 "Master" es nuestra rama principal, en esa rama nosotros tenemos toda nuestra historia de commits, cada vez que nosotros hemos hecho un cambio a esos archivos, podemos verlo en esos commits. El commit mas reciente es el que nosotros llamamos la cabecera "HEAD", pero que pasa si creamos una nueva rama llamada "Cabecera", cuando uno crea una rama, lo que hace es crear una copia del último commit en otro lado, y todos los cambios que hagamos en esta rama, no los va a ver la rama "Master", hasta que lo volvamos a fusionar las dos ramas, en un proceso que se llama "merge".
 
 ## Comandos relacionados con Commit y Ramas
